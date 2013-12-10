@@ -458,7 +458,7 @@ configure: failed program was:
 configure:6289: result: no
 configure:6302: checking whether pthreads are available without options
 configure:6327: gcc -o conftest -g -O2   conftest.c  >&5
-/var/tmp//ccsWFnxF.o(.text+0x23): In function `main':
+/var/tmp//ccDEwYAO.o(.text+0x23): In function `main':
 /usr/home/kguda/node_port/Python-2.7.6/conftest.c:34: undefined reference to `pthread_create'
 configure:6327: $? = 1
 configure: program exited with status 1
@@ -506,7 +506,7 @@ configure:6343: result: no
 configure:6356: checking whether gcc accepts -Kpthread
 configure:6383: gcc -Kpthread -o conftest -g -O2   conftest.c  >&5
 gcc: unrecognized option '-Kpthread'
-/var/tmp//ccG7HNJg.o(.text+0x23): In function `main':
+/var/tmp//ccLsi4dw.o(.text+0x23): In function `main':
 /usr/home/kguda/node_port/Python-2.7.6/conftest.c:34: undefined reference to `pthread_create'
 configure:6383: $? = 1
 configure: program exited with status 1
@@ -554,7 +554,7 @@ configure:6395: result: no
 configure:6406: checking whether gcc accepts -Kthread
 configure:6433: gcc -Kthread -o conftest -g -O2   conftest.c  >&5
 gcc: unrecognized option '-Kthread'
-/var/tmp//cck2xTvJ.o(.text+0x23): In function `main':
+/var/tmp//ccQ6LCCi.o(.text+0x23): In function `main':
 /usr/home/kguda/node_port/Python-2.7.6/conftest.c:34: undefined reference to `pthread_create'
 configure:6433: $? = 1
 configure: program exited with status 1
@@ -6540,7 +6540,7 @@ configure:10180: $? = 0
 configure:10180: result: yes
 configure:10180: checking for bind_textdomain_codeset
 configure:10180: gcc -pthread -o conftest -g -O2   conftest.c  >&5
-/var/tmp//cciuNNQ1.o(.text+0x7): In function `main':
+/var/tmp//cckbqrRZ.o(.text+0x7): In function `main':
 /usr/home/kguda/node_port/Python-2.7.6/conftest.c:142: undefined reference to `bind_textdomain_codeset'
 configure:10180: $? = 1
 configure: failed program was:
@@ -6730,7 +6730,7 @@ configure:10180: $? = 0
 configure:10180: result: yes
 configure:10180: checking for ftime
 configure:10180: gcc -pthread -o conftest -g -O2   conftest.c  >&5
-/var/tmp//ccBPPT6Y.o(.text+0x7): In function `main':
+/var/tmp//cceHVUDx.o(.text+0x7): In function `main':
 /usr/home/kguda/node_port/Python-2.7.6/conftest.c:151: undefined reference to `ftime'
 configure:10180: $? = 1
 configure: failed program was:
@@ -6939,7 +6939,7 @@ configure:10180: $? = 0
 configure:10180: result: yes
 configure:10180: checking for getspnam
 configure:10180: gcc -pthread -o conftest -g -O2   conftest.c  >&5
-/var/tmp//ccLasVrF.o(.text+0x7): In function `main':
+/var/tmp//cc014Ovt.o(.text+0x7): In function `main':
 /usr/home/kguda/node_port/Python-2.7.6/conftest.c:163: undefined reference to `getspnam'
 configure:10180: $? = 1
 configure: failed program was:
@@ -7112,7 +7112,7 @@ configure: failed program was:
 configure:10180: result: no
 configure:10180: checking for getspent
 configure:10180: gcc -pthread -o conftest -g -O2   conftest.c  >&5
-/var/tmp//ccTpbatQ.o(.text+0x7): In function `main':
+/var/tmp//ccMdRoif.o(.text+0x7): In function `main':
 /usr/home/kguda/node_port/Python-2.7.6/conftest.c:163: undefined reference to `getspent'
 configure:10180: $? = 1
 configure: failed program was:
@@ -7329,7 +7329,7 @@ configure:10180: $? = 0
 configure:10180: result: yes
 configure:10180: checking for mremap
 configure:10180: gcc -pthread -o conftest -g -O2   conftest.c  >&5
-/var/tmp//cchLMGW4.o(.text+0x7): In function `main':
+/var/tmp//ccURUBcF.o(.text+0x7): In function `main':
 /usr/home/kguda/node_port/Python-2.7.6/conftest.c:174: undefined reference to `mremap'
 configure:10180: $? = 1
 configure: failed program was:
@@ -7525,7 +7525,7 @@ configure:10180: $? = 0
 configure:10180: result: yes
 configure:10180: checking for plock
 configure:10180: gcc -pthread -o conftest -g -O2   conftest.c  >&5
-/var/tmp//ccyergH1.o(.text+0x7): In function `main':
+/var/tmp//cc7ri1k1.o(.text+0x7): In function `main':
 /usr/home/kguda/node_port/Python-2.7.6/conftest.c:177: undefined reference to `plock'
 configure:10180: $? = 1
 configure: failed program was:
@@ -7716,7 +7716,7 @@ configure:10180: $? = 0
 configure:10180: result: yes
 configure:10180: checking for pthread_init
 configure:10180: gcc -pthread -o conftest -g -O2   conftest.c  >&5
-/var/tmp//ccg2wK3l.o(.text+0x7): In function `main':
+/var/tmp//ccnzYphl.o(.text+0x7): In function `main':
 /usr/home/kguda/node_port/Python-2.7.6/conftest.c:178: undefined reference to `pthread_init'
 configure:10180: $? = 1
 configure: failed program was:
@@ -8019,7 +8019,7 @@ configure:10180: $? = 0
 configure:10180: result: yes
 configure:10180: checking for sigrelse
 configure:10180: gcc -pthread -o conftest -g -O2   conftest.c  >&5
-/var/tmp//ccdUNuT8.o(.text+0x7): In function `main':
+/var/tmp//cchESqlN.o(.text+0x7): In function `main':
 /usr/home/kguda/node_port/Python-2.7.6/conftest.c:211: undefined reference to `sigrelse'
 configure:10180: $? = 1
 configure: failed program was:
@@ -8257,7 +8257,7 @@ configure:10180: $? = 0
 configure:10180: result: yes
 configure:10180: checking for tempnam
 configure:10180: gcc -pthread -o conftest -g -O2   conftest.c  >&5
-/var/tmp//ccIJi3AJ.o(.text+0x7): In function `main':
+/var/tmp//ccpGWyRh.o(.text+0x7): In function `main':
 /usr/home/kguda/node_port/Python-2.7.6/conftest.c:215: warning: warning: tempnam() possibly used unsafely; consider using mkstemp()
 configure:10180: $? = 0
 configure:10180: result: yes
@@ -8275,13 +8275,13 @@ configure:10180: $? = 0
 configure:10180: result: yes
 configure:10180: checking for tmpnam
 configure:10180: gcc -pthread -o conftest -g -O2   conftest.c  >&5
-/var/tmp//ccLvB2md.o(.text+0x7): In function `main':
+/var/tmp//ccwLjdUg.o(.text+0x7): In function `main':
 /usr/home/kguda/node_port/Python-2.7.6/conftest.c:219: warning: warning: tmpnam() possibly used unsafely; consider using mkstemp()
 configure:10180: $? = 0
 configure:10180: result: yes
 configure:10180: checking for tmpnam_r
 configure:10180: gcc -pthread -o conftest -g -O2   conftest.c  >&5
-/var/tmp//ccpOer66.o(.text+0x7): In function `main':
+/var/tmp//ccJ8tWW3.o(.text+0x7): In function `main':
 /usr/home/kguda/node_port/Python-2.7.6/conftest.c:220: undefined reference to `tmpnam_r'
 configure:10180: $? = 1
 configure: failed program was:
@@ -8543,7 +8543,7 @@ configure:10180: $? = 0
 configure:10180: result: yes
 configure:10180: checking for _getpty
 configure:10180: gcc -pthread -o conftest -g -O2   conftest.c  >&5
-/var/tmp//ccBnh0gD.o(.text+0x7): In function `main':
+/var/tmp//ccILzFiS.o(.text+0x7): In function `main':
 /usr/home/kguda/node_port/Python-2.7.6/conftest.c:228: undefined reference to `_getpty'
 configure:10180: $? = 1
 configure: failed program was:
@@ -9295,7 +9295,7 @@ configure:10976: $? = 0
 configure:10980: result: yes
 configure:10993: checking for openpty
 configure:10993: gcc -pthread -o conftest -g -O2   conftest.c  >&5
-/var/tmp//cc1sdLgY.o(.text+0x7): In function `main':
+/var/tmp//ccj0t84q.o(.text+0x7): In function `main':
 /usr/home/kguda/node_port/Python-2.7.6/conftest.c:244: undefined reference to `openpty'
 configure:10993: $? = 1
 configure: failed program was:
@@ -9562,7 +9562,7 @@ configure:11189: $? = 0
 configure:11189: result: yes
 configure:11203: checking for fseek64
 configure:11203: gcc -pthread -o conftest -g -O2   conftest.c  -lutil >&5
-/var/tmp//ccZhAvtI.o(.text+0x7): In function `main':
+/var/tmp//cc4YYLMO.o(.text+0x7): In function `main':
 /usr/home/kguda/node_port/Python-2.7.6/conftest.c:247: undefined reference to `fseek64'
 configure:11203: $? = 1
 configure: failed program was:
@@ -9827,7 +9827,7 @@ configure:11203: $? = 0
 configure:11203: result: yes
 configure:11203: checking for ftell64
 configure:11203: gcc -pthread -o conftest -g -O2   conftest.c  -lutil >&5
-/var/tmp//ccpNwKeX.o(.text+0x7): In function `main':
+/var/tmp//ccsOBRaK.o(.text+0x7): In function `main':
 /usr/home/kguda/node_port/Python-2.7.6/conftest.c:249: undefined reference to `ftell64'
 configure:11203: $? = 1
 configure: failed program was:
@@ -10977,7 +10977,7 @@ configure:12252: $? = 0
 configure:12259: result: yes
 configure:12375: checking for __fpu_control
 configure:12375: gcc -pthread -o conftest -g -O2   conftest.c  -lutil >&5
-/var/tmp//ccvUrWvf.o(.text+0x7): In function `main':
+/var/tmp//ccfRxzKD.o(.text+0x7): In function `main':
 /usr/home/kguda/node_port/Python-2.7.6/conftest.c:282: undefined reference to `__fpu_control'
 configure:12375: $? = 1
 configure: failed program was:
@@ -12181,7 +12181,7 @@ configure:12854: checking whether POSIX semaphores are enabled
 configure:12883: gcc -pthread -o conftest -g -O2   conftest.c  -lutil >&5
 configure:12883: $? = 0
 configure:12883: ./conftest
-./configure: line 1770: 48692 Bad system call: 12     (core dumped) ./conftest$ac_exeext
+./configure: line 1770: 74888 Bad system call: 12     (core dumped) ./conftest$ac_exeext
 configure:12883: $? = 140
 configure: program exited with status 140
 configure: failed program was:
@@ -12475,7 +12475,7 @@ configure:12905: checking for broken sem_getvalue
 configure:12938: gcc -pthread -o conftest -g -O2   conftest.c  -lutil >&5
 configure:12938: $? = 0
 configure:12938: ./conftest
-./configure: line 1770: 48703 Bad system call: 12     (core dumped) ./conftest$ac_exeext
+./configure: line 1770: 74899 Bad system call: 12     (core dumped) ./conftest$ac_exeext
 configure:12938: $? = 140
 configure: program exited with status 140
 configure: failed program was:
