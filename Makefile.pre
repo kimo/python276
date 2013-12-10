@@ -27,23 +27,23 @@ MODLIBS=        _MODLIBS_
 VERSION=	2.7
 srcdir=		.
 
-abs_srcdir=	/usr/home/kguda/node_port/Python-2.7.6
-abs_builddir=	/usr/home/kguda/node_port/Python-2.7.6
-build=		x86_64-unknown-freebsd7.0
-host=		x86_64-unknown-freebsd7.0
+abs_srcdir=	/Users/krishna/work/zbaui/deps/python276
+abs_builddir=	/Users/krishna/work/zbaui/deps/python276
+build=		x86_64-apple-darwin13.0.0
+host=		x86_64-apple-darwin13.0.0
 
-CC=		gcc -pthread
-CXX=		g++ -pthread
+CC=		gcc
+CXX=		g++
 MAINCC=		$(CC)
 LINKCC=		$(PURIFY) $(MAINCC)
 AR=		ar
 RANLIB=		ranlib
 SVNVERSION=	svnversion $(srcdir)
-HGVERSION=	
-HGTAG=		
-HGBRANCH=	
+HGVERSION=	hg id -i $(srcdir)
+HGTAG=		hg id -t $(srcdir)
+HGBRANCH=	hg id -b $(srcdir)
 
-GNULD=          yes
+GNULD=          no
 
 # Shell used by make (some versions default to the login shell, which is bad)
 SHELL=		/bin/sh
@@ -76,8 +76,8 @@ CPPFLAGS=	-I. -IInclude -I$(srcdir)/Include
 LDFLAGS=	
 LDLAST=		
 SGI_ABI=	
-CCSHARED=	-fPIC
-LINKFORSHARED=	-Wl,--export-dynamic
+CCSHARED=	
+LINKFORSHARED=	-u _PyMac_Error
 ARFLAGS=	rc
 # Extra C flags added for building the interpreter object files.
 CFLAGSFORSHARED=
@@ -86,13 +86,13 @@ PY_CFLAGS=	$(CFLAGS) $(CPPFLAGS) $(CFLAGSFORSHARED) -DPy_BUILD_CORE
 
 
 # Machine-dependent subdirectories
-MACHDEP=	freebsd7
+MACHDEP=	darwin
 
 # Multiarch directory (may be empty)
 MULTIARCH=	
 
 # Install prefix for architecture-independent files
-prefix=		/home/kguda
+prefix=		/Users/krishna
 
 # Install prefix for architecture-dependent files
 exec_prefix=	${prefix}
@@ -117,14 +117,14 @@ LIBP=		$(LIBDIR)/python$(VERSION)
 
 # Symbols used for using shared libraries
 SO=		.so
-LDSHARED=	$(CC) -shared $(LDFLAGS)
-BLDSHARED=	$(CC) -shared $(LDFLAGS)
-LDCXXSHARED=	$(CXX) -shared
+LDSHARED=	$(CC) -bundle -undefined dynamic_lookup $(LDFLAGS)
+BLDSHARED=	$(CC) -bundle -undefined dynamic_lookup $(LDFLAGS)
+LDCXXSHARED=	$(CXX) -bundle -undefined dynamic_lookup
 DESTSHARED=	$(BINLIBDEST)/lib-dynload
 
 # Executable suffix (.exe on Windows and Mac OS X)
 EXE=		
-BUILDEXE=	
+BUILDEXE=	.exe
 
 # Short name and location for Mac OS X Python framework
 UNIVERSALSDK=
@@ -135,8 +135,8 @@ PYTHONFRAMEWORKINSTALLDIR=
 # Deployment target selected during configure, to be checked
 # by distutils. The export statement is needed to ensure that the
 # deployment target is active during build.
-MACOSX_DEPLOYMENT_TARGET=
-#export MACOSX_DEPLOYMENT_TARGET
+MACOSX_DEPLOYMENT_TARGET=10.4
+export MACOSX_DEPLOYMENT_TARGET
 
 # Options to enable prebinding (for fast startup prior to Mac OS X 10.3)
 OTHER_LIBTOOL_OPT=
@@ -151,7 +151,7 @@ EXEMODE=	755
 FILEMODE=	644
 
 # configure script arguments
-CONFIG_ARGS=	 '--prefix=/home/kguda'
+CONFIG_ARGS=	 '--prefix=/Users/krishna'
 
 
 # Subdirectories with code
@@ -175,8 +175,8 @@ LDLIBRARYDIR=
 INSTSONAME=	$(LDLIBRARY)
 
 
-LIBS=		 -lutil
-LIBM=		-lm
+LIBS=		-ldl  -framework CoreFoundation
+LIBM=		
 LIBC=		
 SYSLIBS=	$(LIBM) $(LIBC)
 SHLIBS=		$(LIBS)
@@ -184,7 +184,7 @@ SHLIBS=		$(LIBS)
 THREADOBJ=	Python/thread.o
 DLINCLDIR=	.
 DYNLOADFILE=	dynload_shlib.o
-MACHDEP_OBJS=	
+MACHDEP_OBJS=	Python/mactoolboxglue.o
 LIBOBJDIR=	Python/
 LIBOBJS=	
 UNICODE_OBJS=   Objects/unicodeobject.o Objects/unicodectype.o
@@ -194,7 +194,7 @@ BUILDPYTHON=	python$(BUILDEXE)
 
 PYTHON_FOR_BUILD=./$(BUILDPYTHON) -E
 _PYTHON_HOST_PLATFORM=
-HOST_GNU_TYPE=  x86_64-unknown-freebsd7.0
+HOST_GNU_TYPE=  x86_64-apple-darwin13.0.0
 
 # Tcl and Tk config info from --with-tcltk-includes and -libs options
 TCLTK_INCLUDES=	
@@ -914,8 +914,8 @@ maninstall:	altmaninstall
 
 # Install the library
 PLATDIR=	plat-$(MACHDEP)
-EXTRAPLATDIR= 
-EXTRAMACHDEPPATH=
+EXTRAPLATDIR= $(PLATMACDIRS)
+EXTRAMACHDEPPATH=$(PLATMACPATH)
 MACHDEPS=	$(PLATDIR) $(EXTRAPLATDIR)
 XMLLIBSUBDIRS=  xml xml/dom xml/etree xml/parsers xml/sax
 PLATMACDIRS= plat-mac plat-mac/Carbon plat-mac/lib-scriptpackages \
@@ -1346,7 +1346,7 @@ patchcheck:
 
 # Dependencies
 
-Python/thread.o:  $(srcdir)/Python/thread_atheos.h $(srcdir)/Python/thread_beos.h $(srcdir)/Python/thread_cthread.h $(srcdir)/Python/thread_foobar.h $(srcdir)/Python/thread_lwp.h $(srcdir)/Python/thread_nt.h $(srcdir)/Python/thread_os2.h $(srcdir)/Python/thread_pth.h $(srcdir)/Python/thread_pthread.h $(srcdir)/Python/thread_sgi.h $(srcdir)/Python/thread_solaris.h $(srcdir)/Python/thread_wince.h
+Python/thread.o:  $(srcdir)/Python/thread_*.h
 
 # Declare targets that aren't real files
 .PHONY: all build_all sharedmods oldsharedmods test quicktest memtest
